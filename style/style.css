@@ -1,0 +1,174 @@
+:root {
+  --animate-speed: 2s;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  width: 100%;
+  height: 100%;
+  background-color: rgb(32, 35, 48);
+  overflow: hidden;
+}
+
+.intro,
+.page {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 0 4rem;
+}
+
+#logo {
+  width: 50vw;
+}
+
+#logo:hover {
+  opacity: 0.8;
+}
+
+.intro h3 {
+  font-size: 2em;
+  color: white;
+  font-weight: normal;
+  margin: 2rem 0;
+  opacity: 0;
+  animation: fadein 4s ease forwards 5s;
+  cursor: default;
+}
+
+#logo .letter {
+  stroke: #fff;
+  stroke-width: 2;
+  fill: transparent;
+  stroke-dasharray: 1000;
+  stroke-dashoffset: 1000;
+  animation: line-anim 5s ease forwards, fill 1s ease forwards 2s; /* Adjusted timing */
+}
+
+#logo .letter:nth-child(1) {
+  animation-delay: 2s;
+}
+
+#logo .letter:nth-child(2) {
+  animation-delay: 2.2s;
+}
+
+#logo .letter:nth-child(3) {
+  animation-delay: 2.4s;
+}
+
+#logo .letter:nth-child(4) {
+  animation-delay: 2.6s;
+}
+
+#logo .letter:nth-child(5) {
+  animation-delay: 2.8s;
+}
+
+#logo .letter:nth-child(6) {
+  animation-delay: 3s;
+}
+
+#logo .letter:nth-child(7) {
+  animation-delay: 3.2s;
+}
+
+#logo .letter:nth-child(8) {
+  animation-delay: 3.4s;
+}
+
+#logo .letter:nth-child(9) {
+  animation-delay: 3.6s;
+}
+
+#logo .letter:nth-child(10) {
+  animation-delay: 3.8s;
+}
+
+#logo .letter:nth-child(11) {
+  animation-delay: 4s;
+}
+
+#logo .letter:nth-child(12) {
+  animation-delay: 4.2s;
+}
+
+#logo .letter:nth-child(13) {
+  animation-delay: 4.4s;
+}
+
+#logo .letter:nth-child(14) {
+  animation-delay: 4.6s;
+}
+
+@keyframes line-anim {
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+
+@keyframes fill {
+  from {
+    fill: transparent;
+  }
+  to {
+    fill: #fff;
+  }
+}
+
+@keyframes fadein {
+  to {
+    opacity: 1;
+  }
+}
+
+@media (max-width: 768px) {
+  #logo {
+    width: 80vw;
+  }
+}
+
+.btn {
+  display: inline-block;
+  padding: 1rem 2rem;
+  background: #fff;
+  color: #333;
+  text-decoration: none;
+  border: none;
+  margin-top: 1rem;
+  font-size: 1.1rem;
+  transition: all 0.3s ease-in;
+}
+
+/* Social icons */
+.social {
+  display: flex;
+  opacity: 0;
+  animation: fadein 4s ease forwards 5.4s;
+}
+
+.social div {
+  margin: 0 1rem;
+}
+
+.social div:hover {
+  opacity: 0.8;
+}
+
+.social-icon {
+  width: 25px;
+  transition: all 500ms cubic-bezier(0.42, 0, 0.38, 2);
+}
+
+.social-icon:hover {
+  transform: translateY(-5px);
+}
